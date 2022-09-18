@@ -1,0 +1,12 @@
+body {
+    margin: 2rem;
+}
+
+body ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+body h2 {
+    text-decoration: underline;
+}
