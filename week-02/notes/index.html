@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 02 Notes</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../../css/small.css" />
+  </head>
+  <body class="assignments-page">
+    <h1>Week 02 Notes</h1>
+    <br />
+    <ul>
+      <li>
+        Note: Much of the topics in this chapter were a review for me. But I
+        wanted to take some notes of things that I find important to remember,
+        even if I understand the concept.
+      </li>
+      <li>
+        Template literals use back ticks (` `) and allow for interpolation of
+        JavaScript code. The JavaScript expression is placed inside curly braces
+        with a dollar sign in front of them - ${ }.
+        <br />
+        While I understand this concept. My goal of this note is to remind
+        myself to take advantage of it more often, because I tend to use the
+        concatenation method more often, which I can get a bit unruly when it
+        gets large.
+      </li>
+      <li>
+        It is important to remember when deleting items from an array, if using
+        the <code>delete</code> operator, an index will still remain in the
+        array. It will be given a value of <code>undefined</code>.
+        <br />
+        For example:
+        <br />
+        <code
+          >delete movies[2];<br />["Jurassic Park", "Back To The Future",
+          undefined]</code
+        >
+      </li>
+      <li>
+        Destructuring as array is the concept of taking values out of an array
+        and presenting them as individual values. We can assign multiple values
+        at the same time.
+        <br />
+        For example:
+        <br />
+        <code>const [x,y] = [1,2];</code>
+        <br />
+        When we check the value of <code>x</code>, we get 1. And likewise,
+        checking the value of <code>y</code>, we get 2.
+      </li>
+      <li>
+        Something I often forget - using a switch/case statement. This is
+        especially useful when needing multiple if and else statements. REMEMBER
+        to use <code>break;</code> after each case statement you provide.
+      </li>
+      <li>
+        Nested <code>for</code> loops have been tricky for me at times.
+        <br />
+        Remember, the <strong>inner</strong> loop will run ALL THE WAY THROUGH
+        before the next step in the <strong>outer</strong> loop occurs.
+      </li>
+      <li>
+        *Good to remember* - ALL functions return a value. if it is not
+        explicitly stated, the function will return <code>undefined</code>
+      </li>
+      <li>
+        Using <strong>Function Expressions</strong> is a way of defining a
+        function and assigning it to a variable. This differs from
+        <strong>Function Declarations</strong> because you are not assigning the
+        function to a variable
+      </li>
+      <li>
+        <strong>Callbacks</strong> - these are functions that are passed as an
+        argument to another function.
+        <br />
+        For example:
+        <br />
+        <code>
+          function sing(song, callback) {
+          <br />
+          console.log(`I'm singing along to ${song}.`);
+          <br />
+          callback();
+          <br />
+          }
+        </code>
+      </li>
+      <li>
+        Arrow functions are useful in a few ways from regular functions:
+        <br />
+        1. They are a new (as of ES6) shorthand notation to help shorten your
+        code.
+        <br />
+        2. They can be used for writing anonymous functions. Anonymous functions
+        are handy for times when the function will only be used once.
+      </li>
+      <li>
+        <strong>Function Declarations</strong> can be invoked BEFORE they are
+        defined because they are "hoisted" to the top of the scope.
+        <br />
+        However, <strong>Function Expressions</strong> cannot be invoked until
+        AFTER they are defined.
+      </li>
+    </ul>
+  </body>
+</html>

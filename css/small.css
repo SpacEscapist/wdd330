@@ -78,3 +78,40 @@ footer a:hover {
 ul a:hover {
     color: #485665;
 }
+
+
+
+/*==================== Assignment Page ====================*/
+
+
+
+body.assignments-page {
+    margin: 2rem;
+}
+
+body.assignments-page h1 {
+    color: black;
+}
+
+body.assignments-page ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+body.assignments-page ul {
+    max-width: 900px;
+}
+
+body.assignments-page ul li {
+    font-size: 1.1rem;
+}
+
+body.assignments-page h2 {
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+body.assignments-page ul li code {
+    background-color: rgb(221, 221, 221);
+}
