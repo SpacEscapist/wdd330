@@ -115,3 +115,9 @@ body.assignments-page h2 {
 body.assignments-page ul li code {
     background-color: rgb(221, 221, 221);
 }
+
+
+/*==================== Notes Page ====================*/
+.hide-bullet {
+    list-style: none;
+}

@@ -9,6 +9,10 @@ const listArray = [
     label: "Week 02",
     url: "week-02",
   },
+  {
+    label: "Week 03",
+    url: "week-03",
+  },
 ];
 
 listArray.forEach((listItem) => {

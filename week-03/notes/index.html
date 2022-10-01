@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 03 Notes</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../../css/small.css" />
+  </head>
+  <body class="assignments-page">
+    <h1>Week 03 Notes</h1>
+    <br />
+    <ul>
+      <li class="hide-bullet">
+        <strong><em>OBJECTS</em></strong>
+      </li>
+      <li>
+        An object's method can be called either by using dot or bracket
+        notation.
+        <br />
+        - dot notation: superman.fly();
+        <br />
+        - bracket notation: superman["fly"]();
+      </li>
+      <li>
+        You can iterate over an object's key's using "Object.keys()" method.
+        <br />
+        for(const key of <strong>Object.keys(superman)</strong>) {
+        <br />
+        console.log(key) };
+        <br />
+      </li>
+      <li>
+        You can iterate over an object's values's using "Object.values()"
+        method.
+        <br />
+        for(const value of <strong>Object.values(superman)</strong>) {
+        <br />
+        console.log(value) };
+        <br />
+      </li>
+      <li>
+        You can return an array of key-value pairs using "Object.entries()"
+        method.
+        <br />
+        for(const [key,value] of <strong>Object.entries(superman)</strong>) {
+        <br />
+        console.log.(`${key}: ${value}`); }
+      </li>
+      <li>
+        Objects can be used as parameters in to functions. This allows arguments
+        to be entered in any order, or even omitted.
+      </li>
+      <li>
+        JSON is a <em>string representation</em> of a JavaScript object. There
+        are a few differences between JSON and JavaScript object:
+        <br />
+        1. Property names must be double-quoted.
+        <br />
+        2. Permitted values are double-quoted strings, numbers, true, false,
+        null, arrays, and objects.
+        <br />
+        3. Functions are not permitted values.
+      </li>
+      <li>
+        You can "stringify()" a JavaScript object, which returns the object as a
+        string of text. If you do so, any methods of that object will simply be
+        ignored, and not show up in the text.
+      </li>
+
+      <br />
+      <br />
+      <li class="hide-bullet">
+        <strong><em>DOCUMENT OBJECT MODEL</em></strong>
+      </li>
+      <li>
+        While JavaScript is the most used language with the DOM, the DOM is
+        actually <strong>language agnostic</strong>
+      </li>
+      <li>
+        The DOM contains an object called "document". This document object
+        allows us to perform various methods on it, such as...
+        <br />
+        - document.getElementById()
+        <br />
+        - document.querySelector()
+        <br />
+        - document.createElement("li")
+        <br />
+      </li>
+      <li>
+        You can use the "classList" property to add a new class to an element.
+        For example...
+        <br />
+        classList.add("new-class-name")
+      </li>
+      <li>
+        You can access an element's attributes by using the
+        <strong>.getAttribute()</strong> method.
+        <br />
+        You can add an attribute to an element by using the
+        <strong>.setAttribute()</strong> method.
+      </li>
+      <li>
+        The <strong>.innerHTML</strong> property will allow us to insert raw
+        HTML directly into the DOM.
+        <br />
+        Whereas, <strong>.textContent</strong> will only allow us to insert
+        text. Any HTML added will only display in a raw text form.
+      </li>
+
+      <br />
+      <br />
+      <li class="hide-bullet">
+        <strong><em>EVENTS</em></strong>
+      </li>
+      <li>
+        A full list of Events can be found
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/Events"
+          target="_blank"
+          >HERE</a
+        >
+      </li>
+      <li>
+        Event listeners can be added using
+        "<strong>.addEventListener()</strong>"
+      </li>
+      <li>
+        Event listeners can take a total of 3 arguments, althought it's most
+        common to only use 2 arguments:
+        <br />
+        - First argument: The type of event, such as "click"
+        <br />
+        - Second argument: A callback function which is invoked when the event
+        occurs
+        <br />
+        - Third argument: A boolean value that specifies whether capturing
+        should be used or not. Default is set to <strong>false</strong>
+      </li>
+      <li>
+        The more commonly used Events are:
+        <br />
+        - Mouse Events
+        <br />
+        - Keyboard Events
+        <br />
+        - Touch Events (for touch-screen devices)
+      </li>
+      <li>
+        Some of the common <strong>Mouse</strong> events:
+        <br />
+        - click
+        <br />
+        - mousedown
+        <br />
+        - mouseup
+        <br />
+        - dblclick
+      </li>
+      <li>
+        Some of the common <strong>Keyboard</strong> events:
+        <br />
+        - keydown
+        <br />
+        - keypress
+        <br />
+        - keyup
+      </li>
+      <li>
+        Some of the common <strong>Touch</strong> events:
+        <br />
+        - touchstart
+        <br />
+        - touchend
+        <br />
+        - touchmove
+        <br />
+        - touchenter
+        <br />
+        - touchleave
+        <br />
+        - touchcancel
+      </li>
+    </ul>
+  </body>
+</html>
