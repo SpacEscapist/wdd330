@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 04 Notes</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../../css/small.css" />
+  </head>
+  <body class="assignments-page">
+    <h1>Week 04 Notes</h1>
+    <br />
+    <ul>
+      <li class="hide-bullet">
+        <strong><em>FORMS</em></strong>
+      </li>
+      <li>
+        You are able to see the HTML collection of all the forms in your
+        document in the order that they appear in the markup by using the
+        property <strong>document.forms</strong>
+        <br />
+        you can reference a specific form using index notation to return the
+        form object, like so:
+        <br />
+        <code>const form = document.forms[0];</code>
+        <br />
+        <br />
+        You can also use the <strong>name</strong> attribute, instead of the
+        numerical index, to identify the form, like so:
+        <br />
+        <code>const form = document.forms.<em>form-name</em></code>
+        <br />
+        OR
+        <br />
+        <code>const form = document.forms<em>["form-name"]</em></code>
+      </li>
+      <li>
+        You are able to see the HTML collection of all the elements inside a
+        form using the property <strong>forms.elements</strong>
+      </li>
+      <li>
+        <code>button type='reset'</code> While there is a button element with a
+        type of <em>reset</em>, this button is considered poor for usability,
+        since it can be easy to click the button and reset all of a user's data
+        that has been entered into your form. Generally, you should not use a
+        reset button.
+      </li>
+      <li>
+        Common types of form controls include:
+        <br />
+        <code>input</code>
+        <br />
+        <code>select</code>
+        <br />
+        <code>textarea</code>
+        <br />
+        <code>button</code>
+      </li>
+      <li>
+        There is a large list of different input types we can add to our input
+        element. Here you can find that list:
+        <br />
+        -
+        <a
+          href="https://www.w3schools.com/html/html_form_input_types.asp"
+          target="_blank"
+          >W3Schools - Input types</a
+        >
+      </li>
+
+      <li class="hide-bullet">
+        <br />
+        <br />
+        <strong><em>OBJECT-ORIENTED PROGRAMMING (OOP)</em></strong>
+      </li>
+      <li>
+        There are three main concepts in OOP, which are:
+        <br />
+        - Encapsulation
+        <br />
+        - Polymorphism
+        <br />
+        - Inheritance
+      </li>
+      <li>
+        Encapsulation: The inner workings are kept hidden inside the object and
+        only the essential functions are exposed to the end user. Essentially we
+        are keeping all the programming logic inside an object and making
+        methods available to implement the functionality, without the outside
+        world needing to know <em>how</em> it's done.
+      </li>
+      <li>
+        Polymorphism: The same process can be used for different objects. This
+        means various objects can share the same method, but also have the
+        ability to override shared methods with a more specific implementation.
+      </li>
+      <li>
+        Inheritance: Taking the features of one object then adding some new
+        features. This means that we can take an object that already exists and
+        inherit all its properties and methods. We can then improve on its
+        functionality by adding new properties and methods.
+      </li>
+      <li>
+        <strong>Constructor Functions</strong> are functions that define the
+        properties and methods of an object. Take the class
+        <strong>Dice</strong> for example:
+        <br />
+        <code
+          >const Dice = function(sides=6) { <br />this.sides = sides;
+          <br />this.roll = function() { <br />return Math.floor(this.sides *
+          Math.random() + 1)} }
+        </code>
+      </li>
+      <li>
+        Using the constructor function above, we could instantiate a new object
+        of the <strong>Dice</strong> class, like so:
+        <br />
+        <code>const redDice = new Dice;</code>
+        <br />
+        <br />
+        We could also pass in a parameter to create a dice with a number of
+        sides we'd like to specify, like so:
+        <br />
+        <code>const whiteDice = new Dice(4);</code>
+      </li>
+      <li>
+        With ES6, <strong>Class Declarations</strong> do the same thing as
+        <em>Constructor Functions</em>, however they look much similar to
+        writing a class in a class-based programming language.
+        <br />
+        To write a class declaration, it would look like this, using the
+        exmaples above:
+        <br />
+        <code
+          >class Dice {
+          <br />
+          constructor(sides=6) {
+          <br />
+          this.sides = sides; }
+          <br />
+          roll() {
+          <br />
+          return Math.floor(this.sides * Math.random() + 1) } }
+        </code>
+      </li>
+      <li>
+        The preferred sytax is using <strong>Class Declarations</strong> over
+        <em>Constructor Functions</em>
+      </li>
+      <li>
+        <strong>Static Methods</strong> can only be called on the actual class,
+        such as:
+        <br />
+        <code>Dice.description()</code>
+        <br />
+        <br />
+        Static methods CANNOT be called on instances of a class, for example:
+        <br />
+        <code>redDice.description()</code> - Does not work.
+      </li>
+      <li>
+        An object instance can overwrite inherited prototype properties by
+        simply assigning the a new value to the instance's property
+      </li>
+      <li>
+        By default, an object's methods are considered
+        <strong>public</strong> by default.
+      </li>
+      <li>
+        A class can inherit properties from another class using the
+        <code>extends</code> keyword in a class declaration, like so:
+        <br />
+        <code>class NinjaTurtle <em>extends</em> Turtle</code>
+      </li>
+      <li>
+        <strong>Mixins</strong> allows us a way of adding properties and methods
+        of some objects to another object WITHOUT using inheritance. This allows
+        for more complex objects to be created by "mixing" basic objects
+        together.
+        <br />
+        <br />
+        To use mixin functionality, you use the
+        <strong>Object.assign()</strong> method. For example:
+        <br />
+        <code>
+          const a = {};
+          <br />
+          const b = { name: "JavaScript" };
+          <br />
+          Object.assign(a,b);
+        </code>
+        <br />
+        <code>a.name</code> will now return "JavaScript"
+      </li>
+      <li>
+        <strong>Note:</strong> When objects are copied by
+        <em>Object.assign()</em>, they are only copied over by reference. This
+        produces a "shallow copy". This means the new object created is not
+        actually created in memory; the new reference will just point to the old
+        object. When the original object data changes, that change will be seen
+        in ALL shallow copies created from that object.
+      </li>
+      <li>
+        In JavaScript, if you do decide to use classes, it is recommended to
+        make them <em>"skinny"</em>, which means that they don't have too many
+        properties and methods. Classes with too many objects and methods can
+        cause unnecessary bloat if you wish to inherit from that class.
+      </li>
+      <li class="hide-bullet">
+        <br />
+        <br />
+        <strong><em>MODERN JAVASCRIPT DEVELOPMENT</em></strong>
+      </li>
+      <li>
+        Modern JavaScript makes use of a <em>"module"</em>, which is a
+        self-contained piece of code that provides functions and methods that
+        can be used in other files and by other modules. This allows our code to
+        be organized in separate and reusable files, which improves code
+        maintainability.
+      </li>
+      <li>
+        All code in modules is always in <strong>strict mode</strong> without
+        the need for <em>'use strict'</em>. There is no way to opt out of this.
+      </li>
+      <li>
+        A module has its own global scopre, so any variables created in the
+        top-level of a module can only be accessed within that module.
+      </li>
+      <li>
+        A module is just a normal JavaScript file, but uses the keyword
+        <code>export</code> to specify any values or functions that should be
+        made available from the module. NOT EVERYTHING IN A MODULE NEEDS TO BE
+        USED!
+      </li>
+      <li>
+        You can either use the keyword <code>export</code> when the function is
+        defined, or you can add the export directive after the function
+        definition. For example:
+        <br />
+        <code
+          ><em>export</em> function myFunction {<em>// function code here</em
+          >};</code
+        >
+        <br />
+        OR
+        <br />
+        <code>export { myFunction, anotherFunction };</code>
+      </li>
+      <li>
+        You can be selective and import only things that you need from a file.
+        For example:
+        <br />
+        <code>import { myFunction } from "./my-file.js";</code>
+        <br />
+        OR you can import everything from a file:
+        <br />
+        <code>import * as myImport from "./my-file.js";</code>
+        <br />
+        <br />
+        You can then reference a specific function with the alias name you gave
+        it:
+        <br />
+        <code>myImport.myFunction()</code>
+      </li>
+      <li>
+        <strong>Default exports</strong> refer to a <em>single</em> variable,
+        function, or class in a module that can be imported without having to be
+        explicitly named. The syntax for default exports looks like this:
+        <br />
+        <code>const PI = 3.145926;</code>
+        <br />
+        <code><em>export default</em> PI;</code>
+      </li>
+      <li>
+        To import the default export in the example above, the syntax would look
+        like this:
+        <br />
+        <code>import PI from "./pi.js"</code> --- (or whatever you named your
+        file as)
+      </li>
+    </ul>
+  </body>
+</html>
