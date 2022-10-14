@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 05 Notes</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../../css/small.css" />
+  </head>
+  <body class="assignments-page">
+    <h1>Week 05 Notes</h1>
+    <br />
+    <ul>
+      <li class="hide-bullet">
+        <strong><em>Testing and Debugging</em></strong>
+      </li>
+      <li>
+        Errors: Caused when something goes wrong in the program, they are
+        usually caused by one of the following:
+        <br />
+        - System error - A problem with the system or external devices with
+        which the program is interacting
+        <br />
+        - Programmer error - The program contains incorrect syntax or faulty
+        logic; something like a typo
+        <br />
+        - User error - the user has entered data incorrectly, which the program
+        is unable to handle
+      </li>
+      <li>
+        Exceptions: An error that produces a return value that can then be used
+        by the program to deal with the error.
+        <br />
+        - An example would be trying to call a method that does not exist. This
+        will give you a reference error that raises an exception
+      </li>
+      <li>
+        Warnings: Can occur if there's an error in the code that isn't enough to
+        cause the program to crash. This will allow the program to run after a
+        warning occurs
+        <br />
+        - An example would be when assigning a value to a variable that hasn't
+        been declared
+      </li>
+      <li>
+        <strong>Strict Mode</strong> will produce more exceptions and warnings,
+        as well as prohibit the use of some deprecated features. Strict mode
+        will consider poorly written code as actual errors. Strict mode is used
+        to encourage better quality of JavaScript.
+        <br />
+        To enable strict mode, you simply add the line of code
+        <code>"use strict";</code> to the first line of the JavaScript file
+      </li>
+      <li>
+        To apply a JavaScript module to your HTML page, you would write this
+        code into the header of your HTML page:
+        <br />
+        <code>>script type="module" src="main.js">>/script></code>
+      </li>
+      <li>
+        You can create a module object, which can let you import all of a
+        JavaScript module features from a specific module with the following
+        code:
+        <br />
+        <code>import * as Module from "./modules/module.js";</code>
+        <br />
+        By using the "*", this will grab all of the exports available inside of
+        the module.js file. This would allow you to then call any of the
+        available functions, for example:
+        <br />
+        <code>Module.function1();</code>
+      </li>
+      <li>
+        When using a try/catch block, you can also use a
+        <strong>finally</strong> block. The <strong>finally</strong> block will
+        always be executed after the try or catch block, regardless of whether
+        an exception occurred or not. This is useful if you want to some code to
+        run in either case (try or catch)
+      </li>
+      <li>
+        Test-driven Development (TDD) - This is the process of writing tests
+        before any actual code. First, you write tests that will fail (since
+        there is no code to test at first), then you write some code that will
+        allow the tests to pass, the lastly, the code is refactored to make it
+        faster, more readable, and remove any repetition.
+      </li>
+      <li>
+        <strong>Jest</strong> is a TDD framework created by Facebook. It makes
+        it easy to create and run tests.
+        <br />
+        You start by creating a js file that ends in test.js. For example:
+        <code>mycode.test.js</code>
+        <br />
+        Next, you write a test() function inside the file, and pass the test
+        function parameters depending on what code you want tested.
+        <br />
+        When you run <strong>jest</strong>, all files that end with "test.js"
+        within the folder you are testing will be tested and provide you the
+        results
+      </li>
+    </ul>
+  </body>
+</html>
