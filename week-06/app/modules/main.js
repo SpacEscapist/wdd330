@@ -30,6 +30,7 @@ window.addEventListener("load", () => {
     e.target.reset();
 
     // Call displayTools() to show new item added when submit button is pressed
+    getActive();
     displayTodos();
   });
 
