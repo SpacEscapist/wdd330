@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 07 Notes</title>
+
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="../../css/small.css" />
+  </head>
+  <body class="assignments-page">
+    <h1>Week 07 Notes</h1>
+    <br />
+    <ul>
+      <li class="hide-bullet">
+        <strong><em>Further Functions</em></strong>
+      </li>
+      <li>
+        Functions have built-in properties. One such property is the
+        <strong>length</strong> property, which return the number of parameters
+        that a function has.
+      </li>
+      <li>
+        You can use the <code>call()</code> method to set the value to
+        <code>this</code> inside a function. It will be passed as the first
+        argument in the function. For example:
+        <br />
+        <code>
+          function sayHello() {
+          <br />
+          return `Hello, my name is ${ this.name }`;
+          <br />
+          }
+          <br />
+          <br />
+          const branden = { name: "Branden" };
+          <br />
+          sayHello.call(branden);
+        </code>
+        <br />
+        This will return - "Hello, my name is Branden"
+      </li>
+      <li>
+        The <code>apply()</code> method works in much the same way as
+        <code>call()</code>, expect that the arguments of the function are
+        provided as an array, instead of an object (like we did with call()
+        above.)
+      </li>
+      <li>
+        <strong>Memoization</strong> provides result caching. Result caching can
+        be used by assigning the <code>.cache</code> property to a function.
+      </li>
+      <li>
+        <strong>Immediately Invoked Function Expressions</strong> or "IIFEs" are
+        functions that are invoked as soon as they are defined. They are useful
+        for name-spacing variables, as well as setting default values. Since
+        there is no way to remove a variable from a scope once it's been
+        declared, IIFEs are great to use for Temporary Variables since
+        everything disappears after the IIFE is called.
+        <br />
+        We wrap the function in parentheses, then add a second pair of
+        parentheses after wrapping the function. For example, they look like
+        this:
+        <br />
+        <code>(function(){--code here);})();</code>
+      </li>
+      <li>
+        A <strong>Recursive Function</strong> will continue to invoke itself
+        until a certain condition is met. The function calls itself within its
+        own function.
+      </li>
+      <li>
+        <strong>Callbacks</strong> are simply functions that are provided as an
+        argument to another function.
+        <br />
+        It is considered bad practice and can lead to "Callback Hell" if you use
+        more than one callback in a single function.
+      </li>
+      <li>
+        <strong>Promises</strong> help to simplify code, instead of using
+        multiple callbacks, which can lead to confusion. Promises are used to
+        deal with multiple asynchronous actions in a sequence.
+      </li>
+      <li>
+        <strong>Pure functions</strong> adhere to the following rules:
+        <br />
+        1. The return value of a pure function should only depend on the values
+        provided as arguments. It doesn't really rely on values from somewhere
+        else in the program.
+        <br />
+        2. There are no side-effects. A pure function doesn't change any values
+        or data elsewhere in the program. It only makes non-destructive data
+        transformations and returns new values, rather than altering any of the
+        underlying data.
+        <br />
+        3. Given the same arguments, a pure function will always return the same
+        result
+      </li>
+      <li>
+        For pure functions to follow the rules above, they must have:
+        <br />
+        At least one argument; otherwise the return value must depend on
+        something other than the arguments of the function, which will break the
+        first rule.
+        <br />
+        A return value; otherwise there's no point in the function (unless it
+        has changed something else in the program. If this is the case, then it
+        breaks the "no side-effects rule.")
+      </li>
+      <br />
+      <br />
+      <li class="hide-bullet">
+        <strong><em>AJAX</em></strong>
+      </li>
+      <li>
+        Ajax is a technique for sending and receiving data asynchronously in the
+        background. Ajax stands for:
+        <br />
+        Asynchronous JavaScript and XML
+        <br />
+        However, JSON is now used much more widely used than XML to send data.
+        So the term could technically now be called Ajaj.
+      </li>
+      <li>
+        Ajax does not need to do a full page reload. Because it is asynchronous,
+        it can do partial page updates.
+      </li>
+      <li>
+        XMLHttpRequest is an object that is used for requesting and sending data
+        asynchronously across a network. This was standardized by WHATWG and W3C
+        a number of years ago.
+        <br />
+        Since then, <strong>Fetch API</strong> has taken over XMLHttpRequest and
+        is now the preferred method.
+      </li>
+      <li>
+        Fetch API uses promises instead of callbacks, to avoid callback hell.
+        <br />
+        Fetch API will return a promise, which allows us to use a
+        <strong>catch</strong> along with the fetch call.
+      </li>
+      <li>
+        A typical fetch call will look something like this:
+        <br />
+        <code>
+          fetch('https://examplesite.com/data')
+          <br />
+          .then( // code that handles the response )
+          <br />
+          .catch( // code that runs if the server returns an error )
+        </code>
+      </li>
+      <li>
+        <strong>HTTP Headers</strong> are used to pass on any additional
+        information about a request or response. Typical information contained
+        in headers includes:
+        <br />
+        - the file-type of the resource
+        <br />
+        - cookie information
+        <br />
+        - authentication information
+        <br />
+        - when the resource was last modified
+      </li>
+      <li>
+        A Headers object includes a number of properties and methods that can be
+        used to access information about the headers. These properties and
+        methods include:
+        <br />
+        has()
+        <br />
+        get()
+        <br />
+        set()
+        <br />
+        append()
+        <br />
+        delete()
+        <br />
+        keys()
+        <br />
+        values()
+        <br />
+        entries()
+      </li>
+      <li>
+        Requests are objections that include the following properties:
+        <br />
+        url - The URL of the requested resource (this is the only property that
+        is required).
+        <br />
+        method - A string that specifies which HTTP method should be used for
+        the request. By default, this is "GET".
+        <br />
+        headers - This is the Headers object
+        <br />
+        mode - Allows you to specify if CORS is used or not. CORS is enabled by
+        default.
+        <br />
+        cache - Allows you to specify how the request will use the browser's
+        cache.
+        <br />
+        credentials - Lets you specify if cookies should be allowed with the
+        request
+        <br />
+        redirect - Redirects have a choice of 3 different values: follow, error,
+        or manual
+      </li>
+      <li>
+        Requests can retrieve data using a GET request, or they can send data by
+        using a POST request.
+      </li>
+      <li>
+        Fetch API is currently considered a "living standard". This means that
+        it is an experimental technology and it is still being developed. While
+        this is still considered experimental technology, the latest version of
+        most browsers support Fetch API, so it is quite safe to use.
+      </li>
+    </ul>
+  </body>
+</html>
