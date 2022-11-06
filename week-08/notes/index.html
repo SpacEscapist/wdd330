@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 08 Notes</title>
+
+        <!--STYLESHEET-->
+        <link rel="stylesheet" href="../../css/small.css" />
+    </head>
+    <body class="assignments-page">
+        <h1>Week 08 Notes</h1>
+        <br />
+        <ul>
+            <li class="hide-bullet">
+                <strong><em>Transforms and Transitions</em></strong>
+            </li>
+            <li>
+                The <strong>Transform</strong> property allows us to manipulate
+                the appearance of any element on the page. We can use:
+                <br />
+                - translate
+                <br />
+                - rotate
+                <br />
+                - scale
+                <br />
+                - skew
+            </li>
+            <li>
+                Transforms do not work on inline elements. However you can make
+                that work by adding <code>display: inline-block;</code> to the
+                element.
+            </li>
+            <li>
+                <strong>Translate</strong> allows us to move elements up, down,
+                left, or right, in the format - translate(x, y).
+                <br />
+                An example of translate looks like this:
+                <br />
+                <code>transform: translate(45px, -45px)</code>
+                <br />
+                This would move the element right and up by 45 pixels each.
+            </li>
+            <li>
+                <strong>Scale</strong> allows us to grow and shrink an element,
+                in the format - scale(x, y).
+                <br />
+                An example of scale looks like this:
+                <br />
+                <code>transform: scale(.5, 2);</code>
+                <br />
+                This would shrink the width of the element by half, and this
+                would double the height of the element.
+            </li>
+            <li>
+                <strong>Rotation</strong> allows us to rotate an element by a
+                specified angle, in the format - rotate(25deg);
+                <br />
+                An example of rotate looks like this:
+                <br />
+                <code>transform: rotate(25deg);</code>
+                <br />
+                This would rotate our element by 25 degrees.
+            </li>
+            <li>
+                <strong>Skew</strong> allows us to skew an element along its x
+                and y axis, in the format - skew(30deg, 90deg)
+            </li>
+            <li>
+                <strong>Transition</strong> contains 4 properties, they are:
+                <br />
+                - transition-property
+                <br />
+                - transition-duration
+                <br />
+                - transition-timing-function
+                <br />
+                - transition-delay
+            </li>
+            <li>
+                We can use shorthand declaration to target each of those
+                properties in a single statement, like this:
+                <br />
+                <code>
+                    div {
+                    <br />
+                    transition: transform 2s ease-out 50ms;
+                    <br />
+                    }
+                </code>
+                <br />
+                Examples of those transitions can be found here:
+                <a href="https://www.w3schools.com/css/css3_transitions.asp"
+                    >W3Schools - Transitions</a
+                >
+            </li>
+            <li>
+                <strong>Animations</strong> will animate elements over time.
+                They have much more functionality over typical
+                <strong>transitions</strong> because unlike transitions only
+                being able to define starting and ending states, animations
+                allow you to control each step of an animation via
+                <strong>keyframes</strong>.
+                <br />
+                To create an animation, you need to use the
+                <code>@keyframes</code> rule. The beginning of creating an
+                animation would look something like this:
+                <br />
+                <code>
+                    @keyframes myAnimation {
+                    <br />
+                    /* put animation keyframes here */
+                    <br />
+                    }
+                </code>
+                <br />
+                <br />
+                There is a lot that goes along with animations. For examples of
+                animations, they can be found here:
+                <a href="https://www.w3schools.com/css/css3_animations.asp"
+                    >W3Schools - Animations</a
+                >
+            </li>
+            <li>
+                It's important to note that just because you can make CSS do all
+                types of fun and crazy animations, we need to hold ourselves
+                back in the professional world. We should use transitions and
+                animations where it makes sense, but to really restrain
+                ourselves from going overboard and make our professional website
+                look/feel tacky.
+            </li>
+            <br />
+            <br />
+            <li class="hide-bullet">
+                <strong><em>Canvas, SVG, and Drag and Drop</em></strong>
+            </li>
+            <li>
+                Canvas was first developed by Apple. It allows you to draw
+                anything that you can imagine, all through JavaScript. Canvas
+                allows you to draw shapes, lines, arcs, text, gradients,
+                patterns. You can also manipulate pixels in images and video as
+                well.
+            </li>
+            <li>
+                Canvas uses the coordinate system, which works like this:
+                <br />
+                The top-left corner of the canvas has the coordinates (0, 0). If
+                the canvas is 200px by 200px, then the bottom-right corner of
+                the canvas would contain the coordinates (200, 200).
+            </li>
+            <li>
+                <strong>SVG</strong> stands for Scalable Vector Graphic. It is a
+                specific file format which will allow you to describe vector
+                graphics using XML.
+            </li>
+            <li>
+                An important feature of vector images is that they will preserve
+                their quality even as you enlarge or shrink the image.
+            </li>
+            <li>
+                A great open source tool that you can use to create SVG images
+                is called Inkscape, and you can visit the site
+                <a href="http://inkscape.org">HERE</a> to download the program
+            </li>
+            <li>
+                What's the difference between using Canvas or SVG, since both of
+                these technologies allow you to draw custom shapes, paths, and
+                fonts?
+                <br />
+                <br />
+                - Canvas allows for pixel manipulation, however, canvas operates
+                in "immediate mode". This means that you are unable to simply
+                add more to the canvas you're currently working on. Each time a
+                shape is finished drawing, canvas no longer has access to that
+                shape. It doesn't persist as an object that you can modify. So
+                if you want to add to what you've already drawn on the canvas,
+                you need to redraw the new shape from scratch.
+                <br />
+                <br />
+                - Canvas is much faster than SVG, due to the fact that the DOM
+                does not have access to what is drawn on the canvas. This would
+                make canvas a better option if you want to design a game that
+                requires a lot of animations.
+                <br />
+                <br />
+                - SVG's mode is called "retained mode". This means that what you
+                draw to SVG, it is accessible via the DOM. The structure of the
+                image is preserved in the XML document.
+                <br />
+                <br />
+                - Because SVG is a file format - instead of a set of methods
+                which allow you to dynamically draw on a surface - you are
+                unable to manipulate SVG images the way you can manipulate
+                pixels on canvas. For example, it would be impossible to use SVG
+                to convert a color video to black and white, which is possible
+                with canvas.
+                <br />
+                <br />
+                - A good rule of thumb: If you want to paint pixels to the
+                screen, without needing to retrieve and modify your shapes, use
+                Canvas. If you need to access and change specific aspects of
+                your graphics, SVG will most likely be better.
+            </li>
+            <li>
+                The <strong>Drag and Drop</strong> API allows us to specify
+                which elements we want to make draggable, and also specify what
+                should happen when these draggable elements are dragged and
+                dropped over other elements on a page.
+            </li>
+            <li>
+                It is important to note: This API is unsupported by Android and
+                iOS.
+            </li>
+            <li>
+                To learn more information, MDN has a great source for explaining
+                the Drag and Drop API:
+                <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API"
+                    >HERE</a
+                >
+            </li>
+        </ul>
+    </body>
+</html>
