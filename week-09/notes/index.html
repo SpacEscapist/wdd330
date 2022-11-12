@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week 09 Notes</title>
+
+        <!--STYLESHEET-->
+        <link rel="stylesheet" href="../../css/small.css" />
+    </head>
+    <body class="assignments-page">
+        <h1>Week 09 Notes</h1>
+        <br />
+        <ul>
+            <li class="hide-bullet">
+                <strong><em>The Window Object</em></strong>
+            </li>
+            <li>
+                In a browser environment, the global object is the
+                <code>window</code> object. This represents the browser window
+                that contains a web page.
+            </li>
+            <li>
+                <code>window.location</code> is a property of the
+                <code>window</code> object. This property is an object that
+                contains information about the URL of the current page. Using
+                the <code>href</code> property (window.location.href) will
+                return the full URL as a string.
+                <br />
+                <br />
+                <code>hostname</code> property (window.location.hostname) will
+                return a string of the name of the domain of the current URL.
+                <br />
+                <br />
+                <code>pathname</code> property (window.location.pathname) will
+                return a string of the path that follows the domain name.
+                <br />
+                <br />
+                <code>search</code> property (window.location.search) will
+                return a string that begins with a "?" and then followed by the
+                query string parameters of a URL. It will return an empty string
+                if there are no query parameters.
+            </li>
+            <li>
+                <code>window.history</code> is a property that can be used to
+                access information about any previously visited pages in the
+                current browser session. With this <code>history</code> object,
+                it has a number of properties/methods that go along with it.
+            </li>
+            <li>
+                You can use the window method <code>window.open()</code> to open
+                a new window. This method takes the URL you wish to direct to as
+                the first parameter, and the window title as the second
+                parameter.
+            </li>
+            <li>
+                <code>window.screen</code> object contains information about the
+                screen the browser is displayed on, such as height/width of
+                screen, or even color depth.
+            </li>
+            <li>
+                <code>window.document</code> object contains properties and
+                methods that deal with the page that has been loaded into the
+                window.
+            </li>
+            <li>
+                Cookies are small files that are saved locally on a user's
+                computer. A restriction of cookies is that they can only be read
+                by a web page from the same domain that set them. Cookies are
+                also limited to storing up to 4kb of data and only 20 cookies
+                are allowed per domain.
+            </li>
+            <li>
+                To create a cookie, you use the "cookie" property on the
+                document object and give it a key/value pair, like this:
+                <br />
+                <code>document.cookie = "name=Billy Bob";</code>
+            </li>
+            <li>
+                By default, cookies are "session cookies". This means they are
+                deleted once the browser session is finished (the user closes
+                the window). You can set an expiration date on the cookie by
+                using a key/value pair with "expires" as the key name and a date
+                as the value, like this:
+                <br />
+                <code
+                    >const expiryDate = new Date();
+                    <br />
+                    const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;
+                    <br />
+                    expiryDate.setTime(tomorrow);
+                    <br />
+                    document.cookie = `name=Batman; expires=${
+                    expiryDate.toUTCString()}`;
+                </code>
+            </li>
+            <li>
+                You can secure cookies by adding <code>; secure</code> to the
+                end of a string for a cookie. This will ensure it's only
+                transmitted over a secure HTTPS network.
+            </li>
+            <li>
+                In order to delete/remove a cookie, you need to set it to expire
+                at some time in the past.
+            </li>
+            <li>
+                <code>window.setTimeout()</code> method can be used to invoke a
+                function after a set amount of time. It can also be canceled by
+                using the <code>clearTimeout()</code> method.
+            </li>
+            <br />
+            <br />
+            <li class="hide-bullet">
+                <strong><em>HTML5 APIs</em></strong>
+            </li>
+            <li>
+                Using the <code>data-</code> attribute is a way of embedding
+                data in a web page using custom attributes that are ignored by
+                the browser. These attributes are also private to a page, so
+                they are not intended to be used by an external service.
+            </li>
+            <li>
+                To use the <code>data-</code> attribute, you must follow the
+                following format:
+                <br />
+                - Start with <code>data-</code>
+                <br />
+                - Contain only lowercase letters, numbers, hyphens, dots,
+                colons, or underscores.
+                <br />
+                - Include an optional string value.
+                <br />
+                In your HTML document, you would apply the attribute like this:
+                <br />
+                <code>
+                    div id="hero" data-powers="flight super-speed">Superman /div
+                </code>
+            </li>
+            <li>
+                You could access the "data-" attribute example above like this:
+                <br />
+                <code>
+                    const superman = document.getElementById("hero");
+                    <br />
+                    const powers = superman.dataset.powers;
+                    <br />
+                    console.log(powers);
+                </code>
+            </li>
+            <li>
+                The HTML5 specification contains a number of built-in APIs that
+                help gain access to different things such as cameras, batteries,
+                geolocation, etc.
+            </li>
+            <li>
+                HTML5 Web Storage API can come in the form of
+                <code>localStorage</code> or <code>sessionStorage</code>.
+                <strong>localStorage</strong> is persistent and will remain on
+                the local computer browser so long as the storage is not
+                cleared, whereas <strong>sessionStorage</strong> will only
+                persist so long as the session remains open and the browser is
+                not closed.
+            </li>
+            <li>
+                The HTML5 Web Storage API is similar to cookies, however it has
+                fewer restrictions than cookies, has more storage capacity, and
+                is generally easier to use than cookies. This storage is perfect
+                for storing information about users, as well as
+                application-specific information that can be used later during
+                future sessions.
+            </li>
+            <li>
+                Web Storage API has some major differences to cookies, they are:
+                <br />
+                - Information stored is NOT shared with the server on every
+                request.
+                <br />
+                - Information is available in multiple windows of the browser
+                (so long as the domain is the same)
+                <br />
+                - Storage capacity for Web Storage APIs does not have a set
+                limit, unlike 4KB for cookies.
+                <br />
+                - Any data stored does not automatically expire as it does with
+                cookies. For this reason, cookies might be a better choice for
+                something like showing a popup once a day.
+            </li>
+            <li>
+                Geolocation API is another built-in HTML5 API which allows for
+                obtaining the geographical position of the device.
+            </li>
+            <li>
+                To access Geolocation API, you will use the
+                <code>navigator</code> object. An example of using the
+                "navigator" object would look something like this:
+                <br />
+                <code> navigator.geolocation.getCurrentPosition(); </code>
+            </li>
+            <li>
+                <strong>Web Workers</strong> allow processes to be run in the
+                background. This allows for adding support for concurrency in
+                JavaScript.
+                <br />
+                In order to create a Web Worker, you would create it like this:
+                <br />
+                <code>const worker = new Worker("task.js");</code>
+            </li>
+            <li>
+                The Service Worker API allows a worker script to run in the
+                background with the added benefit of being able to intercept
+                network requests.
+            </li>
+            <li>
+                Websockets are a new protocol for communicating over the
+                internet, and allow for real-time, two-way communication.
+            </li>
+            <li>
+                The Notification API allows you to display notifications on the
+                user's system.
+            </li>
+            <li>
+                The <code>audio</code> and <code>video</code> elements can be
+                used to embed audio tracks and video clips in a web page. There
+                is also a Media API that can be used to control the playback
+                using JavaScript.
+            </li>
+        </ul>
+    </body>
+</html>
