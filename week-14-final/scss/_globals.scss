@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+/* =========================== GLOBALS =========================== */
+body {
+    font-family: $body-font;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    background-color: $background-color-body;
+}
+
+main {
+    background-color: $background-color-main;
+}
+.header {
+    background-color: $background-color-main;
+    &__title {
+        font-family: $headlines-font;
+        letter-spacing: 4px;
+    }
+}

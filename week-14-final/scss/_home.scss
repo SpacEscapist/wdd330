@@ -1,0 +1,30 @@
+@use "variables" as *;
+@use "mixins";
+
+/* =========================== HOME PAGE =========================== */
+
+.home {
+    &__section-one {
+        display: flex;
+        align-items: center;
+        &__figure {
+            width: 40%;
+            &--img {
+                height: 400px;
+            }
+        }
+        &__text {
+            width: 60%;
+        }
+    }
+    &__section-two {
+        display: flex;
+        align-items: center;
+        &__figure {
+            width: 40%;
+            &--img {
+                width: 400px;
+            }
+        }
+    }
+}
