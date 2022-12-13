@@ -94,47 +94,248 @@ body {
   font-family: "Roboto", sans-serif;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 2rem;
-  background-color: #cc0000;
+}
+@media only screen and (min-width: 750px) {
+  body {
+    background-color: #cc0000;
+  }
 }
 
 main {
+  border-radius: 10px 10px 0 0;
   background-color: #fbfffe;
+}
+
+footer {
+  background-color: #fbfffe;
+}
+
+/* =========================== HEADER =========================== */
+.hide {
+  display: none;
+}
+
+.active {
+  text-shadow: 1px 1px 2px #003a70;
 }
 
 .header {
-  background-color: #fbfffe;
+  background-image: url("/images/pokeball-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+  background-color: #cc0000;
 }
 .header__title {
   font-family: "Pokemon Solid", sans-serif;
+  font-size: 1.9rem;
+  text-align: center;
+  padding: 1rem 0;
   letter-spacing: 4px;
+  line-height: 2.5rem;
+  color: #ffcb05;
+  -webkit-text-stroke: 1px #3d7dca;
+  text-shadow: 0 0 50px white;
+}
+.header__nav {
+  padding: 1rem;
+}
+.header__nav__menu {
+  text-align: center;
+}
+.header__nav__menu--button {
+  background-color: #3d7dca;
+  color: #ffcb05;
+  border: 1px solid #ffcb05;
+  padding: 0.3rem 1rem;
+  font-size: 1.2rem;
+}
+.header__nav__list {
+  width: 200px;
+  font-size: 1.2rem;
+  background-color: #fbfffe;
+  border: 2px solid #003a70;
+  border-radius: 10px;
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+}
+.header__nav__list--item {
+  padding: 0.5rem;
+}
+.header__nav__list--item a {
+  text-decoration: none;
+  color: #003a70;
+}
+.header__nav__list--item a:hover {
+  text-shadow: 1px 1px 2px #003a70;
 }
 
+@media only screen and (min-width: 750px) {
+  .header {
+    background-color: #cc0000;
+  }
+  .header__title {
+    padding: 4rem 0;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1.5px #3d7dca;
+  }
+  .header__nav {
+    padding: 0;
+  }
+  .header__nav__menu {
+    display: none;
+  }
+  .header__nav__list {
+    display: flex;
+    width: 500px;
+    justify-content: space-around;
+  }
+}
 /* =========================== HOME PAGE =========================== */
 .home__section-one {
-  display: flex;
-  align-items: center;
+  padding: 3rem 1rem 1rem 1rem;
 }
 .home__section-one__figure {
-  width: 40%;
+  float: left;
+  padding: 1rem;
 }
 .home__section-one__figure--img {
-  height: 400px;
+  max-width: 120px;
 }
-.home__section-one__text {
-  width: 60%;
+.home__section-one__text--title {
+  font-size: 1.2rem;
+}
+.home__section-one__text--paragraph {
+  font-size: 0.9rem;
 }
 .home__section-two {
-  display: flex;
-  align-items: center;
+  padding: 2rem 1rem;
 }
 .home__section-two__figure {
-  width: 40%;
+  float: right;
+  padding: 1rem;
 }
 .home__section-two__figure--img {
-  width: 400px;
+  max-width: 120px;
+}
+.home__section-two__text--title {
+  font-size: 1.2rem;
+}
+.home__section-two__text--paragraph {
+  font-size: 0.9rem;
+}
+.home__div-animation {
+  display: block;
+  margin-top: 10rem;
+  padding-bottom: 6rem;
+  position: relative;
+}
+.home__div-animation--person {
+  height: 200px;
+  margin-left: 25%;
+  animation: blur-person 4s linear infinite;
+}
+.home__div-animation--pokeball {
+  position: absolute;
+  width: 40px;
+  animation: pokeball-throw-small 4s linear infinite;
+}
+@media only screen and (min-width: 750px) {
+  .home__section-one {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+  }
+  .home__section-one__figure {
+    padding: 0 2rem;
+    width: 40%;
+    text-align: center;
+  }
+  .home__section-one__figure--img {
+    max-height: 400px;
+    max-width: 100%;
+  }
+  .home__section-one__text {
+    padding: 2rem;
+    width: 60%;
+  }
+  .home__section-one__text--title {
+    font-size: 2rem;
+  }
+  .home__section-one__text--paragraph {
+    font-size: 1rem;
+  }
+  .home__section-two {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .home__section-two__figure {
+    padding: 0 2rem;
+    text-align: center;
+    width: 40%;
+  }
+  .home__section-two__figure--img {
+    max-height: 400px;
+    max-width: 100%;
+  }
+  .home__section-two__text {
+    padding: 2rem;
+    width: 60%;
+  }
+  .home__section-two__text--title {
+    font-size: 2rem;
+  }
+  .home__section-two__text--paragraph {
+    font-size: 1rem;
+  }
+  .home__div-animation {
+    display: block;
+    margin-top: 10rem;
+    padding-bottom: 6rem;
+    position: relative;
+  }
+  .home__div-animation--person {
+    height: 200px;
+    margin-left: 30%;
+    animation: blur-person 4s linear infinite;
+  }
+  .home__div-animation--pokeball {
+    position: absolute;
+    width: 40px;
+    animation: pokeball-throw-large 4s linear infinite;
+  }
 }
 
+@keyframes pokeball-throw-small {
+  50% {
+    transform: rotate(360deg) translate(50px, 100px) rotate(540deg) scale(3);
+  }
+  90% {
+    transform: rotate(720deg) translate(50px, 100px) rotate(1080deg) scale(6);
+  }
+  100% {
+    transform: rotate(720deg) translate(50px, 100px) rotate(1080deg) scale(6);
+  }
+}
+@keyframes pokeball-throw-large {
+  50% {
+    transform: rotate(360deg) translate(100px, 100px) rotate(540deg) scale(5);
+  }
+  90% {
+    transform: rotate(720deg) translate(100px, 100px) rotate(1080deg) scale(10);
+  }
+  100% {
+    transform: rotate(720deg) translate(100px, 100px) rotate(1080deg) scale(10);
+  }
+}
+@keyframes blur-person {
+  100% {
+    filter: blur(4px);
+  }
+}
 /* =========================== TEAM BUILDER PAGE =========================== */ /* =========================== POKEMON SEARCH PAGE =========================== */
 
 /*# sourceMappingURL=styles.css.map */

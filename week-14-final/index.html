@@ -4,17 +4,32 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="js/script.js" defer></script>
         <link rel="stylesheet" href="styles.css" />
-        <title>Document</title>
+        <title>Home | Pokemon Team Builder</title>
     </head>
     <body>
         <header class="header">
             <h1 class="header__title">Pokemon Team Builder</h1>
             <nav class="header__nav">
-                <ul>
-                    <li class="header__nav--item">Home</li>
-                    <li class="header__nav--item">My Team</li>
-                    <li class="header__nav--item">Pokemon Search</li>
+                <div class="header__nav__menu">
+                    <button
+                        class="header__nav__menu--button"
+                        onclick="toggleMenu()"
+                    >
+                        &#9776;
+                    </button>
+                </div>
+                <ul class="header__nav__list">
+                    <li class="header__nav__list--item active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="header__nav__list--item">
+                        <a href="/view/my-team.html">My Team</a>
+                    </li>
+                    <li class="header__nav__list--item">
+                        <a href="/view/pokemon-search.html">Pokemon Search</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -45,8 +60,14 @@
                     </p>
                 </div>
             </section>
-
             <section class="home__section-two">
+                <figure class="home__section-two__figure">
+                    <img
+                        class="home__section-two__figure--img"
+                        src="images/charizard-breathing-fire.png"
+                        alt="Charizard breathing fire"
+                    />
+                </figure>
                 <div class="home__section-two__text">
                     <h2 class="home__section-two__text--title">
                         History of Pokemon Games
@@ -63,14 +84,18 @@
                         anim id est laborum.
                     </p>
                 </div>
-                <figure class="home__section-two__figure">
-                    <img
-                        class="home__section-two__figure--img"
-                        src="images/charizard-breathing-fire.png"
-                        alt="Charizard breathing fire"
-                    />
-                </figure>
             </section>
+
+            <div class="home__div-animation">
+                <img
+                    class="home__div-animation--person"
+                    src="/images/ash-throwing-pokeball.png"
+                />
+                <img
+                    class="home__div-animation--pokeball"
+                    src="/images/pokeball-2.png"
+                />
+            </div>
         </main>
 
         <footer>This is the footer</footer>

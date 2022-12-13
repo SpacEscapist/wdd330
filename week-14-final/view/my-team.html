@@ -4,17 +4,32 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/js/script.js" defer></script>
         <link rel="stylesheet" href="../styles.css" />
-        <title>Document</title>
+        <title>My Team | Pokemon Team Builder</title>
     </head>
     <body>
         <header class="header">
             <h1 class="header__title">Pokemon Team Builder</h1>
             <nav class="header__nav">
-                <ul>
-                    <li class="header__nav--item">Home</li>
-                    <li class="header__nav--item">My Team</li>
-                    <li class="header__nav--item">Pokemon Search</li>
+                <div class="header__nav__menu">
+                    <button
+                        class="header__nav__menu--button"
+                        onclick="toggleMenu()"
+                    >
+                        &#9776;
+                    </button>
+                </div>
+                <ul class="header__nav__list">
+                    <li class="header__nav__list--item">
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li class="header__nav__list--item active">
+                        <a href="#">My Team</a>
+                    </li>
+                    <li class="header__nav__list--item">
+                        <a href="/view/pokemon-search.html">Pokemon Search</a>
+                    </li>
                 </ul>
             </nav>
         </header>
