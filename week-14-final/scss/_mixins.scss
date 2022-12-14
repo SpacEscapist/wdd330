@@ -15,4 +15,10 @@
             @content;
         }
     }
+    // Extra sizing
+    @if $break == extra {
+        @media only screen and (min-width: $break-point-extra) {
+            @content;
+        }
+    }
 }

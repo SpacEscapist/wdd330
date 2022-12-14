@@ -107,7 +107,10 @@ main {
 }
 
 footer {
-  background-color: #fbfffe;
+  padding: 1rem 0;
+  background-color: #3d7dca;
+  text-align: center;
+  border-top: 2px solid #ffcb05;
 }
 
 /* =========================== HEADER =========================== */
@@ -195,7 +198,7 @@ footer {
 }
 /* =========================== HOME PAGE =========================== */
 .home__section-one {
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 1rem;
 }
 .home__section-one__figure {
   float: left;
@@ -211,7 +214,7 @@ footer {
   font-size: 0.9rem;
 }
 .home__section-two {
-  padding: 2rem 1rem;
+  padding: 0 1rem;
 }
 .home__section-two__figure {
   float: right;
@@ -336,6 +339,142 @@ footer {
     filter: blur(4px);
   }
 }
-/* =========================== TEAM BUILDER PAGE =========================== */ /* =========================== POKEMON SEARCH PAGE =========================== */
+/* =========================== TEAM BUILDER PAGE =========================== */
+.team {
+  padding: 2rem 2rem 5rem 2rem;
+}
+.team__title {
+  text-align: center;
+  padding: 2rem;
+}
+.team__section {
+  display: flex;
+  padding-bottom: 4rem;
+}
+.team__section__text__header {
+  display: flex;
+}
+.team__section__text__header--title {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+.team__section__text__header--counter {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  align-self: flex-end;
+}
+.team__section__text--ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  max-width: 400px;
+  margin-top: 1rem;
+}
+.team__section__text--ol li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  margin: 0.75rem;
+  width: 160px;
+  border-bottom: 1px dotted black;
+}
+.team__section__text--ol li div button {
+  font-size: 1.7rem;
+  background-color: white;
+  color: red;
+  padding: 0;
+  border: none;
+}
+.team__section__text--ol li div button:hover {
+  cursor: pointer;
+  color: darkred;
+  text-shadow: 1px 1px 1px darkred;
+}
+.team__section__text--list ul {
+  border: 1px solid black;
+  height: 150px;
+  width: 273px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.team__section__text--list ul li:hover {
+  background-color: lightgray;
+}
+.team__section__text__form--input {
+  width: 250px;
+  margin-top: 2rem;
+  padding: 0.65rem;
+  font-size: 1rem;
+}
+.team__section__text__form--button {
+  border-radius: 10px;
+  background-color: #003a70;
+  color: #ffcb05;
+  font-size: 1rem;
+  padding: 0.65rem;
+}
+
+/* =========================== POKEMON SEARCH PAGE =========================== */
+.search {
+  padding: 2rem 2rem 6rem 2rem;
+}
+.search__title {
+  text-align: center;
+  padding: 2rem;
+}
+.search__paragraph {
+  text-align: center;
+}
+.search__form {
+  display: flex;
+  justify-content: center;
+}
+.search__form--input {
+  width: 250px;
+  margin-top: 2rem;
+  padding: 0.65rem;
+  font-size: 1rem;
+}
+.search__form--button {
+  border-radius: 10px;
+  background-color: #003a70;
+  color: #ffcb05;
+  font-size: 1rem;
+  margin-top: 2rem;
+  width: 100px;
+  height: 43px;
+  padding: 0.65rem;
+}
+.search__form--div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search__list ul {
+  padding: 0.5rem;
+  border: 1px solid black;
+  height: 150px;
+  width: 255px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.search__list ul li:hover {
+  background-color: lightgray;
+}
+.search__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+.search__section__details {
+  font-size: 1.3rem;
+}
+
+.pokemonImage {
+  max-width: 350px;
+}
 
 /*# sourceMappingURL=styles.css.map */

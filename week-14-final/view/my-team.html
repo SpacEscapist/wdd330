@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="/js/script.js" defer></script>
+        <script src="/modules/global-scripts.js" defer></script>
+        <script src="/modules/my-team.js" defer></script>
         <link rel="stylesheet" href="../styles.css" />
         <title>My Team | Pokemon Team Builder</title>
     </head>
@@ -28,7 +29,7 @@
                         <a href="#">My Team</a>
                     </li>
                     <li class="header__nav__list--item">
-                        <a href="/view/pokemon-search.html">Pokemon Search</a>
+                        <a href="/view/pokemon-search.html">Pokedex</a>
                     </li>
                 </ul>
             </nav>
@@ -39,18 +40,33 @@
             <section class="team__section">
                 <div class="team__section__text">
                     <p class="team__section__text--note">
-                        *Note: You may add up to 6 pokemon on your team
+                        In order to become a pokemon master, you need a champion
+                        team! Build your perfect team here to conquer the
+                        pokemon world out there. <br /><br />*Note: You may add
+                        up to 6 pokemon on your team.
                     </p>
-                    <input
-                        class="team__section__text--input"
-                        type="text"
-                        placeholder="Pokemon name goes here"
-                    />
-                    <ul class="team__section__text--ul">
-                        <li>Bulbasaur</li>
-                        <li>Charmander</li>
-                        <li>Pikachu</li>
-                    </ul>
+                    <div class="team__section__text__header">
+                        <h3 class="team__section__text__header--title">Team Members</h3>
+                        <div class="team__section__text__header--counter" id="blah"></div>
+                    </div>
+                    <ol class="team__section__text--ol"></ol>
+                    <form class="team__section__text__form">
+                        <input
+                            class="team__section__text__form--input"
+                            name="addPokemon"
+                            type="text"
+                            placeholder="Pokemon name here"
+                            onkeyup="filterList()"
+                            onblur="closeList()"
+                            required
+                        />
+                        <input class="team__section__text__form--button" type="submit" value="Add">
+                        </input>
+                    </form>
+                    <div class="team__section__text--list" id="pokemon-list">
+                        <ul class="team__selection__text--list--ul">
+                        </ul>
+                    </div>
                 </div>
                 <figure class="team__section__figure">
                     <img
@@ -61,6 +77,6 @@
             </section>
         </main>
 
-        <footer>This is the footer</footer>
+        <footer class="footer">© Branden Torrance | WDD 330 | Fall 2022</footer>
     </body>
 </html>

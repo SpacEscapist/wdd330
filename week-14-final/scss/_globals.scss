@@ -17,5 +17,8 @@ main {
 }
 
 footer {
-    background-color: $background-color-main;
+    padding: 1rem 0;
+    background-color: $pokemon-lightblue;
+    text-align: center;
+    border-top: 2px solid $pokemon-yellow;
 }

@@ -4,7 +4,7 @@
 /* =========================== HOME PAGE =========================== */
 .home {
     &__section-one {
-        padding: 3rem 1rem 1rem 1rem;
+        padding: 3rem 1rem 1rem;
 
         &__figure {
             float: left;
@@ -24,7 +24,7 @@
     }
 
     &__section-two {
-        padding: 2rem 1rem;
+        padding: 0 1rem;
 
         &__figure {
             float: right;

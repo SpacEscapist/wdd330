@@ -1,4 +1,66 @@
-@use "variables";
+@use "variables" as *;
 @use "mixins";
 
 /* =========================== POKEMON SEARCH PAGE =========================== */
+.search {
+    padding: 2rem 2rem 6rem 2rem;
+    &__title {
+        text-align: center;
+        padding: 2rem;
+    }
+    &__paragraph {
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+        justify-content: center;
+        &--input {
+            width: 250px;
+            margin-top: 2rem;
+            padding: 0.65rem;
+            font-size: 1rem;
+        }
+        &--button {
+            border-radius: 10px;
+            background-color: $pokemon-darkblue;
+            color: $pokemon-yellow;
+            font-size: 1rem;
+            margin-top: 2rem;
+            width: 100px;
+            height: 43px;
+            padding: 0.65rem;
+        }
+        &--div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__list {
+        & ul {
+            padding: 0.5rem;
+            border: 1px solid black;
+            height: 150px;
+            width: 255px;
+            overflow: hidden;
+            overflow-y: scroll;
+            & li:hover {
+                background-color: lightgray;
+            }
+        }
+    }
+    &__section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+        &__details {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.pokemonImage {
+    max-width: 350px;
+}

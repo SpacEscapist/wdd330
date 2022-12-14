@@ -1,0 +1,85 @@
+@use "variables" as *;
+@use "mixins";
+
+/* =========================== TEAM BUILDER PAGE =========================== */
+
+.team {
+    padding: 2rem 2rem 5rem 2rem;
+    &__title {
+        text-align: center;
+        padding: 2rem;
+    }
+    &__section {
+        display: flex;
+        padding-bottom: 4rem;
+        &__text {
+            &__header {
+                display: flex;
+                &--title {
+                    margin-top: 3rem;
+                    font-size: 1.4rem;
+                    text-decoration: underline;
+                }
+                &--counter {
+                    margin-left: 1rem;
+                    font-size: 1.2rem;
+                    align-self: flex-end;
+                }
+            }
+            &--ol {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1rem;
+                max-width: 400px;
+                margin-top: 1rem;
+                & li {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1.3rem;
+                    margin: 0.75rem;
+                    width: 160px;
+                    border-bottom: 1px dotted black;
+                }
+                & li div button {
+                    font-size: 1.7rem;
+                    background-color: white;
+                    color: red;
+                    padding: 0;
+                    border: none;
+                }
+                & li div button:hover {
+                    cursor: pointer;
+                    color: darkred;
+                    text-shadow: 1px 1px 1px darkred;
+                }
+            }
+            &--list {
+                & ul {
+                    border: 1px solid black;
+                    height: 150px;
+                    width: 273px;
+                    overflow: hidden;
+                    overflow-y: scroll;
+                    & li:hover {
+                        background-color: lightgray;
+                    }
+                }
+            }
+            &__form {
+                &--input {
+                    width: 250px;
+                    margin-top: 2rem;
+                    padding: 0.65rem;
+                    font-size: 1rem;
+                }
+                &--button {
+                    border-radius: 10px;
+                    background-color: $pokemon-darkblue;
+                    color: $pokemon-yellow;
+                    font-size: 1rem;
+                    padding: 0.65rem;
+                }
+            }
+        }
+    }
+}
