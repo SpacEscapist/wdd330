@@ -5,7 +5,7 @@ document.getElementById("search-list").style.display = "none";
 document
     .querySelector(".search__form--input")
     .addEventListener("click", (event) => {
-        document.getElementById("search-list").style.display = "block";
+        document.getElementById("search-list").style.display = "";
 
         // Call the sort function when the input is clicked
         sort();
