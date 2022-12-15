@@ -3,10 +3,10 @@
 
 /* =========================== POKEMON SEARCH PAGE =========================== */
 .search {
-    padding: 2rem 2rem 6rem 2rem;
+    padding: 1.5rem 1.5rem 6rem 1.5rem;
     &__title {
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
     }
     &__paragraph {
         text-align: center;
@@ -15,7 +15,7 @@
         display: flex;
         justify-content: center;
         &--input {
-            width: 250px;
+            width: 150px;
             margin-top: 2rem;
             padding: 0.65rem;
             font-size: 1rem;
@@ -42,7 +42,7 @@
             padding: 0.5rem;
             border: 1px solid black;
             height: 150px;
-            width: 255px;
+            width: 150px;
             overflow: hidden;
             overflow-y: scroll;
             & li:hover {
@@ -51,16 +51,58 @@
         }
     }
     &__section {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
         margin-top: 3rem;
+        &__image {
+            max-width: 400px;
+            margin: 0 auto;
+        }
         &__details {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            text-align: center;
+            & ul {
+                list-style: none;
+            }
         }
     }
 }
 
 .pokemonImage {
-    max-width: 350px;
+    max-width: 100%;
+}
+
+// ============================ Large Breakpoint ============================
+@include mixins.breakpoint(large) {
+    .search {
+        padding: 2rem 2rem 6rem 2rem;
+        &__form {
+            &--input {
+                width: 250px;
+            }
+        }
+        &__list {
+            & ul {
+                width: 255px;
+            }
+        }
+        &__section {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            &__image {
+                max-width: 400px;
+                margin: unset;
+            }
+            &__details {
+                font-size: 1.3rem;
+                text-align: left;
+                & ul {
+                    list-style: square;
+                }
+            }
+        }
+    }
+
+    .pokemonImage {
+        max-width: 100%;
+    }
 }

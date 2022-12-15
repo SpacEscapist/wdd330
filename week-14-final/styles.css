@@ -198,7 +198,7 @@ footer {
 }
 /* =========================== HOME PAGE =========================== */
 .home__section-one {
-  padding: 3rem 1rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
 }
 .home__section-one__figure {
   float: left;
@@ -214,7 +214,7 @@ footer {
   font-size: 0.9rem;
 }
 .home__section-two {
-  padding: 0 1rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 .home__section-two__figure {
   float: right;
@@ -237,7 +237,7 @@ footer {
 }
 .home__div-animation--person {
   height: 200px;
-  margin-left: 25%;
+  margin-left: 15%;
   animation: blur-person 4s linear infinite;
 }
 .home__div-animation--pokeball {
@@ -248,6 +248,7 @@ footer {
 @media only screen and (min-width: 750px) {
   .home__section-one {
     padding-top: 2rem;
+    padding-bottom: 0rem;
     display: flex;
     align-items: center;
   }
@@ -271,6 +272,7 @@ footer {
     font-size: 1rem;
   }
   .home__section-two {
+    padding-top: 0;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -296,7 +298,7 @@ footer {
   }
   .home__div-animation {
     display: block;
-    margin-top: 10rem;
+    margin-top: 12rem;
     padding-bottom: 6rem;
     position: relative;
   }
@@ -314,24 +316,24 @@ footer {
 
 @keyframes pokeball-throw-small {
   50% {
-    transform: rotate(360deg) translate(50px, 100px) rotate(540deg) scale(3);
+    transform: rotate(360deg) translate(50px, 100px) rotate(540deg) scale(2.5);
   }
   90% {
-    transform: rotate(720deg) translate(50px, 100px) rotate(1080deg) scale(6);
+    transform: rotate(720deg) translate(50px, 100px) rotate(1080deg) scale(5);
   }
   100% {
-    transform: rotate(720deg) translate(50px, 100px) rotate(1080deg) scale(6);
+    transform: rotate(720deg) translate(50px, 100px) rotate(1080deg) scale(5);
   }
 }
 @keyframes pokeball-throw-large {
   50% {
-    transform: rotate(360deg) translate(100px, 100px) rotate(540deg) scale(5);
+    transform: rotate(360deg) translate(100px, 100px) rotate(540deg) scale(4);
   }
   90% {
-    transform: rotate(720deg) translate(100px, 100px) rotate(1080deg) scale(10);
+    transform: rotate(720deg) translate(100px, 100px) rotate(1080deg) scale(8);
   }
   100% {
-    transform: rotate(720deg) translate(100px, 100px) rotate(1080deg) scale(10);
+    transform: rotate(720deg) translate(100px, 100px) rotate(1080deg) scale(8);
   }
 }
 @keyframes blur-person {
@@ -341,38 +343,50 @@ footer {
 }
 /* =========================== TEAM BUILDER PAGE =========================== */
 .team {
-  padding: 2rem 2rem 5rem 2rem;
+  padding: 1.5rem 1.5rem 5rem 1.5rem;
 }
 .team__title {
   text-align: center;
   padding: 2rem;
 }
+.team__note {
+  text-align: center;
+}
 .team__section {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
-  padding-bottom: 4rem;
+  flex-direction: column;
+  align-items: center;
 }
 .team__section__text__header {
   display: flex;
+  justify-content: space-evenly;
 }
 .team__section__text__header--title {
   margin-top: 3rem;
   font-size: 1.4rem;
   text-decoration: underline;
+  text-align: center;
+  margin-right: 0.5rem;
 }
 .team__section__text__header--counter {
-  margin-left: 1rem;
   font-size: 1.2rem;
+  text-align: center;
   align-self: flex-end;
+  margin-left: 0.5rem;
 }
 .team__section__text--ol {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
   max-width: 400px;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  justify-items: center;
 }
 .team__section__text--ol li {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
   font-size: 1.3rem;
   margin: 0.75rem;
@@ -391,37 +405,81 @@ footer {
   color: darkred;
   text-shadow: 1px 1px 1px darkred;
 }
-.team__section__text--list ul {
-  border: 1px solid black;
-  height: 150px;
-  width: 273px;
-  overflow: hidden;
-  overflow-y: scroll;
-}
-.team__section__text--list ul li:hover {
-  background-color: lightgray;
+.team__section__text__form {
+  display: flex;
+  justify-content: center;
 }
 .team__section__text__form--input {
-  width: 250px;
+  width: 150px;
   margin-top: 2rem;
   padding: 0.65rem;
   font-size: 1rem;
+}
+.team__section__text__form--div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .team__section__text__form--button {
   border-radius: 10px;
   background-color: #003a70;
   color: #ffcb05;
+  margin-top: 1.95rem;
   font-size: 1rem;
+  width: 75px;
+  height: 43px;
   padding: 0.65rem;
 }
+.team__section__text__form--list ul {
+  border: 1px solid black;
+  height: 150px;
+  width: 171px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.team__section__text__form--list ul li:hover {
+  background-color: lightgray;
+}
+.team__section__figure {
+  display: flex;
+  max-width: 400px;
+  margin-top: 3rem;
+}
+.team__section__figure--img {
+  align-self: center;
+  width: 100%;
+}
 
+@media only screen and (min-width: 750px) {
+  .team {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+  .team__section {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .team__section__figure--img {
+    align-self: flex-start;
+  }
+  .team__section__text--ol {
+    grid-template-columns: 1fr 1fr;
+    justify-items: unset;
+  }
+  .team__section__text__form--input {
+    width: 250px;
+  }
+  .team__section__text__form--list ul {
+    width: 273px;
+  }
+}
 /* =========================== POKEMON SEARCH PAGE =========================== */
 .search {
-  padding: 2rem 2rem 6rem 2rem;
+  padding: 1.5rem 1.5rem 6rem 1.5rem;
 }
 .search__title {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 .search__paragraph {
   text-align: center;
@@ -431,7 +489,7 @@ footer {
   justify-content: center;
 }
 .search__form--input {
-  width: 250px;
+  width: 150px;
   margin-top: 2rem;
   padding: 0.65rem;
   font-size: 1rem;
@@ -456,7 +514,7 @@ footer {
   padding: 0.5rem;
   border: 1px solid black;
   height: 150px;
-  width: 255px;
+  width: 150px;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -464,17 +522,53 @@ footer {
   background-color: lightgray;
 }
 .search__section {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   margin-top: 3rem;
 }
+.search__section__image {
+  max-width: 400px;
+  margin: 0 auto;
+}
 .search__section__details {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.search__section__details ul {
+  list-style: none;
 }
 
 .pokemonImage {
-  max-width: 350px;
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 750px) {
+  .search {
+    padding: 2rem 2rem 6rem 2rem;
+  }
+  .search__form--input {
+    width: 250px;
+  }
+  .search__list ul {
+    width: 255px;
+  }
+  .search__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .search__section__image {
+    max-width: 400px;
+    margin: unset;
+  }
+  .search__section__details {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  .search__section__details ul {
+    list-style: square;
+  }
+  .pokemonImage {
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

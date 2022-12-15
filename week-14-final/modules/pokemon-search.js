@@ -82,6 +82,7 @@ window.addEventListener("load", () => {
                 const createImg = document.createElement("img");
                 createImg.classList.add("pokemonImage");
                 createImg.setAttribute("id", "pokemon-image");
+                createImg.setAttribute("alt", data.name);
                 createImg.src = image;
                 imgPlacement.appendChild(createImg);
 

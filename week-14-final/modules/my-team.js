@@ -86,7 +86,7 @@ function displayTeam() {
     const counter = 6 - teamArray.length;
     const teamCounter = (document.querySelector(
         ".team__section__text__header--counter"
-    ).textContent = `- ${counter} slots remaining`);
+    ).textContent = `${counter} slots remaining`);
 
     if (counter != 0) {
         // Change color of text to green if team is not full
@@ -95,14 +95,19 @@ function displayTeam() {
         ).style.color = "green";
 
         // Display the input form if team is not full
-        document.querySelector(".team__section__text__form").style.display =
-            "block";
+        document.querySelector(".team__section__text__form").style.display = "";
+    }
+    if (counter === 1) {
+        // Take plural off of "slots"
+        document.querySelector(
+            ".team__section__text__header--counter"
+        ).textContent = `${counter} slot remaining`;
     }
     if (counter === 0) {
         // Alert that the team is full
         document.querySelector(
             ".team__section__text__header--counter"
-        ).textContent = "- Team is full";
+        ).textContent = "Team is full";
 
         // Change color of text to red
         document.querySelector(

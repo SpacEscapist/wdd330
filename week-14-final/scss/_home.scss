@@ -4,7 +4,7 @@
 /* =========================== HOME PAGE =========================== */
 .home {
     &__section-one {
-        padding: 3rem 1rem 1rem;
+        padding: 3rem 1rem 1rem 1rem;
 
         &__figure {
             float: left;
@@ -24,7 +24,7 @@
     }
 
     &__section-two {
-        padding: 0 1rem;
+        padding: 2rem 1rem 1rem 1rem;
 
         &__figure {
             float: right;
@@ -50,7 +50,7 @@
         position: relative;
         &--person {
             height: 200px;
-            margin-left: 25%;
+            margin-left: 15%;
             animation: blur-person 4s linear infinite;
         }
         &--pokeball {
@@ -64,6 +64,7 @@
     @include mixins.breakpoint(large) {
         &__section-one {
             padding-top: 2rem;
+            padding-bottom: 0rem;
             // margin-top: 2rem;
             display: flex;
             align-items: center;
@@ -88,6 +89,7 @@
             }
         }
         &__section-two {
+            padding-top: 0;
             display: flex;
             align-items: center;
             flex-direction: row-reverse;
@@ -113,7 +115,7 @@
         }
         &__div-animation {
             display: block;
-            margin-top: 10rem;
+            margin-top: 12rem;
             padding-bottom: 6rem;
             position: relative;
             &--person {
@@ -133,15 +135,16 @@
 // Pokeball Animation small view
 @keyframes pokeball-throw-small {
     50% {
-        transform: rotate(360deg) translate(50px, 100px) rotate(540deg) scale(3);
+        transform: rotate(360deg) translate(50px, 100px) rotate(540deg)
+            scale(2.5);
     }
     90% {
         transform: rotate(720deg) translate(50px, 100px) rotate(1080deg)
-            scale(6);
+            scale(5);
     }
     100% {
         transform: rotate(720deg) translate(50px, 100px) rotate(1080deg)
-            scale(6);
+            scale(5);
     }
 }
 
@@ -149,15 +152,15 @@
 @keyframes pokeball-throw-large {
     50% {
         transform: rotate(360deg) translate(100px, 100px) rotate(540deg)
-            scale(5);
+            scale(4);
     }
     90% {
         transform: rotate(720deg) translate(100px, 100px) rotate(1080deg)
-            scale(10);
+            scale(8);
     }
     100% {
         transform: rotate(720deg) translate(100px, 100px) rotate(1080deg)
-            scale(10);
+            scale(8);
     }
 }
 
