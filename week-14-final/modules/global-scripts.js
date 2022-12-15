@@ -10,7 +10,7 @@ function filterList() {
         document.querySelector(".search__form--input");
     const filter = input.value.toUpperCase();
     const div =
-        document.querySelector(".team__section__text--list") ||
+        document.querySelector(".team__section__text__form--list") ||
         document.querySelector(".search__list");
     const li = div.getElementsByTagName("li");
 
