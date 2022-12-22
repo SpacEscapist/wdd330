@@ -22,7 +22,7 @@ const listArray = [
         url: "week-05",
     },
     {
-        label: "Week 06",
+        label: "Week 06 (Todo App - Project)",
         url: "week-06",
     },
     {
@@ -42,7 +42,7 @@ const listArray = [
         url: "week-10",
     },
     {
-        label: "Week 14 (Final Project)",
+        label: "Week 14 (Pokemon Team Builder - Final Project)",
         url: "week-14-final",
     },
 ];
